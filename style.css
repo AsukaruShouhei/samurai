@@ -1,0 +1,106 @@
+/* 共通設定 */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+form{
+    width: 300px;
+    margin: 200px auto;
+}
+
+/* ここから「header」 */
+header{
+    background: #0ea5c6;
+}
+
+header h1{
+    text-align: center;
+    background: #074684;
+    padding:10px 0;
+    margin-bottom: 0;
+}
+
+header nav{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li{
+    padding: 10px 20px;
+    border-right: 1px solid white;
+    width: 200px;
+    text-align: center;
+}
+
+header nav ul li:nth-child(1){
+    border-left: 1px solid white;
+    /* border-top: 1px solid white; */
+}
+
+
+/* ここから「main-wrap」 */
+.main-wrap{
+    background: #f2efb6;
+}
+
+.main-main{
+    padding-top: 10px;;
+}
+
+.main-side{
+    /* background: #a0edf7; */
+    border-right: 1px dotted #074684;
+    padding-left: 0;
+}
+
+.main{
+    color:#333333;
+}
+
+.main-side li{
+    padding: 10px 20px;
+    border-top:1px dotted #074684;
+}
+
+.main-side li:nth-child(6){
+    border-bottom:1px dotted #074684;
+}
+
+.main-side li a{
+    color: #074684;
+}
+
+.article-content{
+    display: none;
+}
+
+.active{
+    display: block;
+}
