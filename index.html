@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>メインページ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700');
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="#">MINOブログ</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">MINOについて</a></li>
+                <li><a href="#">サービス内容</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#">所在地</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-wrap py-5">
+        <div class="container">
+            <div class="main row">
+                <div class="main-side col-3">
+                    <ul>
+                        <li><a class="index-btn" href="#">最新記事</a></li>
+                        <li><a class="index-btn" href="#">ブログ一覧</a></li>
+                        <li><a class="index-btn" href="#">新規投稿</a></li>
+                        <li><a class="index-btn" href="#">カテゴリ一覧</a></li>
+                        <li><a class="index-btn" href="#">カテゴリ編集</a></li>
+                        <li><a class="index-btn" href="#">記事管理</a></li>
+                    </ul>
+                </div>
+                <div class="main-main col-9">
+                    <div class="article-content active">
+                        <p>最新記事</p>
+                        <p>ここにデフォルトで最新の記事が表示される</p>
+                    </div>
+                    <div class="article-content">
+                        <p>ブログ一覧</p>
+                        <p>ここにブログ一覧が表示される</p>
+                    </div>
+                    <div class="article-content">
+                        <p>新規投稿</p>
+                        <p>ここに新規投稿が表示される</p>
+                    </div>
+                    <div class="article-content">
+                        <p>カテゴリ一覧</p>
+                        <p>ここにカテゴリ一覧が表示される</p>
+                    </div>
+                    <div class="article-content">
+                        <p>カテゴリ編集</p>
+                        <p>ここにカテゴリ編集が表示される</p>
+                    </div>
+                    <div class="article-content">
+                        <p>記事管理</p>
+                        <p>ここに記事管理が表示される</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('.index-btn').click(function(){
+                $('.active').removeClass('active');
+                var clickIndex = $('.index-btn').index($(this));
+                $('.article-content').eq(clickIndex).addClass('active');
+            });
+
+        });
+    </script>
+</body>
+</html>
