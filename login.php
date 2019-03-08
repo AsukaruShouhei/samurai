@@ -1,4 +1,13 @@
+<?php
+    // ログインした状態と同等にするためセッションを開始します
+     session_start();
 
+     // 暗号学的的に安全なランダムなバイナリを生成し、それを16進数に変換することでASCII文字列に変換します
+      $toke_byte = openssl_random_pseudo_bytes(16);
+      $csrf_token = bin2hex($toke_byte);
+      // 生成したトークンをセッションに保存します
+      $_SESSION['csrf_token'] = $csrf_token;
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -17,6 +26,8 @@
         <h1><a href="#">ブログ</a></h1>
     </header>
     <form action="data.php" method="POST">
+        <!-- CSRF対策 -->
+        <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
         <div class="form-group">
             <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="メールアドレス">
         </div>
